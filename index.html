@@ -73,36 +73,31 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>¡Nos casamos!</h3>
-                <p>Nos encataría que formes parte de esta historia.
-                    <br>
-                    Reserva este día para compartir con nosotros.
-                    <br>
-                    21 de Septiembre 2019
-                    <br>
-                    Caracas, Venezuela.
-                    <br>
-                        <strong>Ceremonia:</strong> 3:30 pm
-                        <br>
-                        <strong>Recepción:</strong> 5:00 pm
+                <h3>
+                  ¡Nos casamos!
+                </h3>
+                <p>
+                  Nos encataría que formes parte de esta historia.<br>
+                  Reserva este día para compartir con nosotros.<br>
+                  25 de Junio 2022<br>
+                  <strong>Evento:</strong> 6:00 pm<br>
+                  San Pedro Sula, Honduras.
                 </p>
-
-
             </div>
         </div>
     </div>
 </section>
 
 
-<section id="video-bg" class="hidden-sm hidden-xs">
+<!-- <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
          data-property="{videoURL:'https://youtu.be/8bUoeEvCmxE',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:30, stopAt:115, opacity:1}">
     </div>
     <div id="video-content">
-        <h5>Caracas</h5>
+        <h5>San Pedro Sula</h5>
         <p>Entre nuestras montañas</p>
     </div>
-</section>
+</section> -->
 
 <section id="map" class="section-padding">
     <div class="text-center">
@@ -110,7 +105,7 @@
         <p>Es más fácil de lo que crees!</p>
     </div>
     <div id="map-canvas">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d404.1041879874268!2d-88.0315396322268!3d15.510842068140901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b6a08b92a03%3A0xc35f65cca81397a!2sRestaurante%20Tradiciones!5e0!3m2!1ses!2shn!4v1654266453518!5m2!1ses!2shn" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d404.1041879874268!2d-88.0315396322268!3d15.510842068140901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b6a08b92a03%3A0xc35f65cca81397a!2sRestaurante%20Tradiciones!5e0!3m2!1ses!2shn!4v1654266453518!5m2!1ses!2shn" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div id="map-content-wrapper" class="container pointer-events-none">
         <div class="row">
@@ -123,13 +118,13 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>Quinta Cima</h5>
-                            <p>Oripoto Av. Tamanaco</p>
+                            <h5>Lugar</h5>
+                            <p>Restaurante Tradiciones</p>
                         </div>
                         <div class="col-md-6">
-                            <h5>Detalles</h5>
+                            <h5>Dirección</h5>
                             <p>
-                                Cuarta calle a mano izquierda
+                                Barrio Los Andes, 12 Avenida, 6 Calle N.O., 3 cuadras abajo de Comisariato Los Andes 504
                             </p>
                         </div>
                     </div>
@@ -167,21 +162,14 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Confirma tu asistencia</h3>
-                <p>Agradeceríamos nos pudieses indicar si podrás asistir antes del 15 de Agosto </p>
+                <p>Agradeceríamos nos pudieses indicar si podrás asistir antes del 20 de Junio </p>
                 <form id="rsvp-form" class="rsvp-form gform"
-                      action=""
+                      action="https://script.google.com/macros/s/AKfycbx-V6d9R48XCNlpugwueTihUmSO4VeJDsC787tj0tS6-hIAdzRoqSGHAwJl2U-UilY/exec"
                       method="POST">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="Email" class=""
-                                                                     placeholder="Tu email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="Nombre" class=""
+                                <i class="fa fa-user"></i><input name="name" class=""
                                                                  placeholder="Tu Nombre"
                                                                  required>
                             </div>
@@ -189,28 +177,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="Total" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Esposo/esposa e hijos"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
                             <div style="margin-bottom:1em">
-                                <input name="Asistencia"  type="radio" value="si"> Sí asistiré
+                                <input name="response"  type="radio" value="si"> Sí podré asistir
                                 <br>
-                                <input name="Asistencia" type="radio" value="no"> No podré asistir
+                                <input name="response" type="radio" value="no"> No podré asistir
                             </div>
                         </div>
-                        <!-- <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
