@@ -212,12 +212,14 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Sólo un momento!</strong> Estamos verificando tus detalles.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Sólo un momento!</strong> Estamos verificando tus datos.'));
 
             $.post('https://script.google.com/macros/s/AKfycbxgfkaIkrOJ_d-mJMVVih0g__k8R4XT3-NvRlluv3vWA5-mITSko4Z_Zj9g2cJMCkY/exec', data)
                 .done(function (data) {
                     console.log(data);
                     $('#alert-wrapper').html('');
+                    $('#rsvp-modal-title').html(data.Nombre);
+                    $('#rsvp-modal-description').html(data.Mensaje);
                     $('#rsvp-modal').modal('show');
                 })
                 .fail(function (data) {
