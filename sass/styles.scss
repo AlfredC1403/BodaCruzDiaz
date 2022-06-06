@@ -254,7 +254,6 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/Principal.jpeg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -792,7 +791,8 @@ Google map
 RSVP form
 ========================================================================== */
 .rsvp {
-  padding-bottom: 140px;
+  padding-top: 140px;
+  padding-bottom: 40px;
   .rsvp-form {
     .rsvp-btn {
       padding: 15px 0;
