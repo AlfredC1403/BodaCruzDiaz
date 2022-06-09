@@ -210,16 +210,23 @@ $(document).ready(function () {
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
+        var localData = $(this).serializeArray().reduce(function(obj, item) {
+          obj[item.name] = item.value;
+          return obj;
+        }, {});
         var data = $(this).serialize();
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Sólo un momento!</strong> Estamos verificando tus datos.'));
 
             $.post('https://script.google.com/macros/s/AKfycbxgfkaIkrOJ_d-mJMVVih0g__k8R4XT3-NvRlluv3vWA5-mITSko4Z_Zj9g2cJMCkY/exec', data)
                 .done(function (data) {
-                    console.log(data);
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal-title').html(data.Nombre);
                     $('#rsvp-modal-description').html(data.Mensaje);
+                    if(localData['Respuesta'] == 'Si' && data.Mensaje != 'Parece que ya has respondido a esta invitación.<br>De no ser así, ponte en contacto con nosotros.'){
+                      $("#rsvp-modal-image").attr("src",'img/Mesas.png');
+                      console.log('Test');
+                    }
                     $('#rsvp-modal').modal('show');
                 })
                 .fail(function (data) {
