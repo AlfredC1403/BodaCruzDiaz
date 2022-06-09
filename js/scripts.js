@@ -225,7 +225,9 @@ $(document).ready(function () {
                     $('#rsvp-modal-description').html(data.Mensaje);
                     if(localData['Respuesta'] == 'Si' && data.Mensaje != 'Parece que ya has respondido a esta invitación.<br>De no ser así, ponte en contacto con nosotros.'){
                       $("#rsvp-modal-image").attr("src",'img/Mesas.png');
-                      console.log('Test');
+                    }
+                    else{
+                      $("#rsvp-modal-image").attr("src",'');
                     }
                     $('#rsvp-modal').modal('show');
                 })
