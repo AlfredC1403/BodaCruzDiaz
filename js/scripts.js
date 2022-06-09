@@ -223,7 +223,7 @@ $(document).ready(function () {
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal-title').html(data.Nombre);
                     $('#rsvp-modal-description').html(data.Mensaje);
-                    if(localData['Respuesta'] == 'Si' && data.Mensaje != 'Parece que ya has respondido a esta invitación.<br>De no ser así, ponte en contacto con nosotros.'){
+                    if(localData['Respuesta'] == 'Si' && data.Mensaje != 'Parece que ya has respondido a esta invitación.<br>De no ser así, ponte en contacto con nosotros.' && data.Mensaje != 'Tu codigo no existe.'){
                       $("#rsvp-modal-image").attr("src",'img/Mesas.png');
                     }
                     else{
