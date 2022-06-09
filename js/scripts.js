@@ -229,15 +229,14 @@ $(document).ready(function () {
                     else{
                       $("#rsvp-modal-image").attr("src",'');
                     }
+                    $('#rsvp-form').trigger("reset");
                     $('#rsvp-modal').modal('show');
                 })
                 .fail(function (data) {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Lo sentimos!</strong> Hubo un problema con el servidor. '));
                 });
-
     });
-
 });
 
 /********************** Extras **********************/
